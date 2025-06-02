@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>LarkERP - Corporate System</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&family=Open+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="fix.css">  
+</head>
+<body>
+  <!-- Enhanced Floating Abstract Shapes -->
+  <div class="floating-shapes">
+    <div class="shape shape1"></div>
+    <div class="shape shape2"></div>
+    <div class="shape shape3"></div>
+    <div class="shape shape4"></div>
+    <div class="shape shape5"></div>
+    <div class="shape shape6"></div>
+  </div>
+
+  <header>
+    <div class="logo-container">
+      <img src="logo-prasetia.png" alt="Logo Prasetia" />
+      <div class="logo-separator"></div>
+      <img src="MNcvgyiAFHVYgSfkotDcWV7k34.png" alt="Logo Verdanco Group" />
+    </div>
+  </header>
+
+  <main>
+    <h1 class="title">Lark  ERP</h1>
+    
+    <!-- Enhanced Navigation -->
+    <nav class="nav-links">
+      <button class="subtitle active" data-target="group">Prasetia & Verdanco Group</button>
+      <button class="subtitle" data-target="master">Master Data</button>
+      <button class="subtitle" data-target="planning">Planning</button>
+      <button class="subtitle" data-target="transaction">Transaction</button>
+    </nav>
+
+    <!-- Group Section -->
+    <section id="group" class="section active group-section">
+      <div class="section-header">
+        <h2>Prasetia & Verdanco Group</h2>
+        <p>Comprehensive management for all companies within the corporate group ecosystem</p>
+      </div>
+      <div class="cards-container">
+        <div class="card">
+          <div class="card-icon">🏢</div>
+          <h3>PT Prasetia Dwidharma</h3>
+          <div class="card-options">
+            <button>View List</button>
+            <button>Create Form</button>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-icon">👥</div>
+          <h3>PT PDT & PT PQW</h3>
+          <div class="card-options">
+            <button>View List</button>
+            <button>Create Form</button>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-icon">🏭</div>
+          <h3>PT TPN & PT ASM & PT ITI</h3>
+          <div class="card-options">
+            <button>View List</button>
+            <button>Create Form</button>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-icon">⚡</div>
+          <h3>PT Verdanco Group</h3>
+          <div class="card-options">
+            <button>View List</button>
+            <button>Create Form</button>
+          </div>
+        </div>
+      </div>    
+    </section>
+
+    <!-- Master Data Section -->
+    <section id="master" class="section master-section">
+      <div class="section-header">
+        <h2>Master Data</h2>
+        <p>Centralized data management for products, customers, and vendor relationships</p>
+      </div>
+      <div class="cards-container">
+        <div class="card">
+          <div class="card-icon">📦</div>
+          <h3>Product Management</h3>
+          <div class="card-options">
+            <button>View List</button>
+            <button>Create Form</button>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-icon">🤝</div>
+          <h3>Customer Relations</h3>
+          <div class="card-options">
+            <button>View List</button>
+            <button>Create Form</button>
+          </div>
+        </div>
+        
+        <div class="card">
+          <div class="card-icon">🚚</div>
+          <h3>Vendor Network</h3>
+          <div class="card-options">
+            <button>View List</button>
+            <button>Create Form</button>
+          </div>
+        </div>
+        </p>
+      </div>
+    </section>
+
+    <!-- Planning Section -->
+    <section id="planning" class="section planning-section">
+      <div class="section-header">
+        <h2>Strategic Planning</h2>
+        <p>Advanced planning and resource optimization for maximum efficiency</p>
+      </div>
+      <div class="cards-container">
+        <div class="card">
+          <div class="card-icon">🔧</div>
+          <h3>Material Planning</h3>
+          <div class="card-options">
+            <button>View List</button>
+            <button>Create Form</button>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-icon">📋</div>
+          <h3>Requisition System</h3>
+          <div class="card-options">
+            <button>View List</button>
+            <button>Create Form</button>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-icon">💰</div>
+          <h3>Budget Control</h3>
+          <div class="card-options">
+            <button>View List</button>
+            <button>Create Form</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Transaction Section -->
+    <section id="transaction" class="section transaction-section">
+      <div class="section-header">
+        <h2>Transaction Hub</h2>
+        <p>Streamlined purchase orders and intelligent payment processing</p>
+      </div>
+      <div class="cards-container">
+        <div class="card">
+          <div class="card-icon">🛒</div>
+          <h3>Purchase Orders</h3>
+          <div class="card-options">
+            <button>View List</button>
+            <button>Create Form</button>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-icon">💳</div>
+          <h3>Payment Gateway</h3>
+          <div class="card-options">
+            <button>View List</button>
+            <button>Create Form</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <button id="backToTop" title="Back to Top">↑</button>
+  </main>
+
+  <script>
+    // Enhanced JavaScript functionality
+    document.addEventListener('DOMContentLoaded', function() {
+      const navButtons = document.querySelectorAll('.nav-links button');
+      const sections = document.querySelectorAll('.section');
+      const backToTopButton = document.getElementById('backToTop');
+
+      // Enhanced navigation with smooth transitions
+      navButtons.forEach(button => {
+        button.addEventListener('click', function() {
+          const targetId = this.getAttribute('data-target');
+          
+          // Remove active class from all buttons and sections
+          navButtons.forEach(btn => btn.classList.remove('active'));
+          sections.forEach(section => section.classList.remove('active'));
+          
+          // Add active class to clicked button and corresponding section
+          this.classList.add('active');
+          document.getElementById(targetId).classList.add('active');
+          
+          // Smooth scroll to top of section
+          document.getElementById(targetId).scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+          });
+        });
+      });
+
+      // Enhanced back to top functionality
+      window.addEventListener('scroll', function() {
+        if (window.pageYOffset > 300) {
+          backToTopButton.style.display = 'block';
+          backToTopButton.style.opacity = '1';
+        } else {
+          backToTopButton.style.opacity = '0';
+          setTimeout(() => {
+            if (window.pageYOffset <= 300) {
+              backToTopButton.style.display = 'none';
+            }
+          }, 300);
+        }
+      });
+
+      backToTopButton.addEventListener('click', function() {
+        window.scrollTo({
+          top: 0,
+          behavior: 'smooth'
+        });
+      });
+
+      // Enhanced card interactions
+      const cards = document.querySelectorAll('.card');
+      cards.forEach(card => {
+        card.addEventListener('mouseenter', function() {
+          this.style.transform = 'translateY(-10px) scale(1.02)';
+        });
+        
+        card.addEventListener('mouseleave', function() {
+          this.style.transform = 'translateY(0) scale(1)';
+        });
+      });
+
+      // Add loading states for buttons
+      const actionButtons = document.querySelectorAll('.card-options button');
+      actionButtons.forEach(button => {
+        button.addEventListener('click', function(e) {
+          e.preventDefault();
+          const originalText = this.textContent;
+          this.textContent = 'Loading...';
+          this.classList.add('loading');
+          
+          // Simulate loading
+          setTimeout(() => {
+            this.textContent = originalText;
+            this.classList.remove('loading');
+            
+            // You can add actual functionality here
+            console.log(`${originalText} clicked for ${this.closest('.card').querySelector('h3').textContent}`);
+          }, 1500);
+        });
+      });
+
+      // Enhanced keyboard navigation
+      document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape') {
+          // Close any open modals or return to first section
+          navButtons.forEach(btn => btn.classList.remove('active'));
+          sections.forEach(section => section.classList.remove('active'));
+          navButtons[0].classList.add('active');
+          sections[0].classList.add('active');
+        }
+        
+        // Arrow key navigation
+        if (e.key === 'ArrowLeft' || e.key === 'ArrowRight') {
+          const activeButton = document.querySelector('.nav-links button.active');
+          const currentIndex = Array.from(navButtons).indexOf(activeButton);
+          let newIndex;
+          
+          if (e.key === 'ArrowLeft') {
+            newIndex = currentIndex > 0 ? currentIndex - 1 : navButtons.length - 1;
+          } else {
+            newIndex = currentIndex < navButtons.length - 1 ? currentIndex + 1 : 0;
+          }
+          
+          navButtons[newIndex].click();
+        }
+      });
+
+      // Dynamic background color change based on active section
+      const updateBackgroundGradient = () => {
+  const activeSection = document.querySelector('.section.active');
+  const body = document.body;
+  
+  if (activeSection) {
+    const sectionId = activeSection.id;
+    switch(sectionId) {
+      case 'group':
+        body.style.background = 'linear-gradient(135deg, #ffffff 0%, #ffe5e5 50%, #fca5a5 100%)';
+        break;
+      case 'master':
+        body.style.background = 'linear-gradient(135deg, #fff5f5 0%, #fcdcdc 50%, #f87171 100%)';
+        break;
+      case 'planning':
+        body.style.background = 'linear-gradient(135deg, #ffffff 0%, #fef2f2 40%, #fecaca 100%)';
+        break;
+      case 'transaction':
+        body.style.background = 'linear-gradient(135deg, #fffafa 0%, #fde8e8 50%, #f87171 100%)';
+        break;
+    }
+    body.style.backgroundAttachment = 'fixed';
+  }
+};
+
+
+      // Update background on section change
+      navButtons.forEach(button => {
+        button.addEventListener('click', updateBackgroundGradient);
+      });
+
+      // Add particle effect on card hover
+      cards.forEach(card => {
+        card.addEventListener('mouseenter', function() {
+          createParticleEffect(this);
+        });
+      });
+
+      function createParticleEffect(element) {
+        const rect = element.getBoundingClientRect();
+        const particleCount = 5;
+        
+        for (let i = 0; i < particleCount; i++) {
+          const particle = document.createElement('div');
+          particle.style.position = 'fixed';
+          particle.style.width = '4px';
+          particle.style.height = '4px';
+          particle.style.background = '#6366f1';
+          particle.style.borderRadius = '50%';
+          particle.style.pointerEvents = 'none';
+          particle.style.zIndex = '9999';
+          particle.style.left = (rect.left + Math.random() * rect.width) + 'px';
+          particle.style.top = (rect.top + Math.random() * rect.height) + 'px';
+          
+          document.body.appendChild(particle);
+          
+          // Animate particle
+          const animation = particle.animate([
+            { 
+              transform: 'translateY(0px) scale(1)', 
+              opacity: 1 
+            },
+            { 
+              transform: 'translateY(-50px) scale(0)', 
+              opacity: 0 
+            }
+          ], {
+            duration: 1000,
+            easing: 'cubic-bezier(0.4, 0, 0.2, 1)'
+          });
+          
+          animation.addEventListener('finish', () => {
+            particle.remove();
+          });
+        }
+      }
+
+      // Add intersection observer for section animations
+      const observerOptions = {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+      };
+
+      const sectionObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.style.animation = 'sectionFadeIn 0.8s cubic-bezier(0.4, 0, 0.2, 1)';
+          }
+        });
+      }, observerOptions);
+
+      sections.forEach(section => {
+        sectionObserver.observe(section);
+      });
+
+      // Add ripple effect to buttons
+      function addRippleEffect(button) {
+        button.addEventListener('click', function(e) {
+          const ripple = document.createElement('span');
+          const rect = this.getBoundingClientRect();
+          const size = Math.max(rect.width, rect.height);
+          const x = e.clientX - rect.left - size / 2;
+          const y = e.clientY - rect.top - size / 2;
+          
+          ripple.style.width = ripple.style.height = size + 'px';
+          ripple.style.left = x + 'px';
+          ripple.style.top = y + 'px';
+          ripple.classList.add('ripple');
+          
+          this.appendChild(ripple);
+          
+          setTimeout(() => {
+            ripple.remove();
+          }, 600);
+        });
+      }
+
+      // Add ripple effect to all buttons
+      document.querySelectorAll('button').forEach(addRippleEffect);
+
+      // Initialize background gradient
+      updateBackgroundGradient();
+    });
+
+    // Add CSS for ripple effect
+    const rippleStyle = document.createElement('style');
+    rippleStyle.textContent = `
+      button {
+        position: relative;
+        overflow: hidden;
+      }
+      
+      .ripple {
+        position: absolute;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.6);
+        transform: scale(0);
+        animation: ripple-animation 0.6s linear;
+        pointer-events: none;
+      }
+      
+      @keyframes ripple-animation {
+        to {
+          transform: scale(4);
+          opacity: 0;
+        }
+      }
+    `;
+    document.head.appendChild(rippleStyle);
+  </script>
+</body>
+</html>
