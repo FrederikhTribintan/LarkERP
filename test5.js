@@ -2,6 +2,27 @@ document.addEventListener('DOMContentLoaded', function() {
   const navButtons = document.querySelectorAll('.nav-links button');
   const sections = document.querySelectorAll('.section');
   const backToTopButton = document.getElementById('backToTop');
+  
+//button
+navButtons.forEach(button => {
+  button.addEventListener('click', function () {
+    // Hapus semua class 'active' dari button dan section
+    navButtons.forEach(btn => btn.classList.remove('active'));
+    sections.forEach(sec => sec.classList.remove('active'));
+
+    // Tambahkan class 'active' ke tombol yang diklik
+    this.classList.add('active');
+
+    // Dapatkan target section dari data-target
+    const target = this.getAttribute('data-target');
+    const targetSection = document.getElementById(target);
+    if (targetSection) {
+      targetSection.classList.add('active');
+    }
+  });
+});
+
+
 
   // Button click handlers with loading states
   const actionButtons = document.querySelectorAll('.card-options button');
